@@ -1,9 +1,9 @@
 output "id" {
-  value = data.azurerm_storage_account.example.id
+  value = data.azurerm_storage_account.storage_account.id
 }
 
 output "name" {
-  value = data.azurerm_storage_account.example.name
+  value = data.azurerm_storage_account.storage_account.name
 }
 
 output "primary_access_key" {
