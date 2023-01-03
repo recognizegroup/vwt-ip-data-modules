@@ -18,3 +18,8 @@ data "azurerm_api_management" "api_management" {
   name                = var.api_management_name
   resource_group_name = var.resource_group_name
 }
+
+data "azurerm_api_management_logger" "apim_logger" {
+  name                = var.api_management_logger_name
+  resource_group_name = var.resource_group_name
+}

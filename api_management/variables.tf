@@ -7,3 +7,8 @@ variable "api_management_name" {
   type        = string
   description = "The name of the APIM resource"
 }
+
+variable "api_management_logger_name" {
+  type        = optional(string)
+  description = "The name of the APIM logger resource"
+}
