@@ -14,7 +14,5 @@ provider "azurerm" {
   features {}
 }
 
-data "azurerm_api_management" "api_management" {
-  name                = var.api_management_name
-  resource_group_name = var.resource_group_name
+data "azurerm_subscription" "current" {
 }
