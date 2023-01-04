@@ -7,6 +7,8 @@
       version = "~> 2.15.0"
     }
   }
+  
+  backend "azurerm" {}
 }
 
 data "azuread_group" "active_directory_group" {
