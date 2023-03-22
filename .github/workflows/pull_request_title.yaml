@@ -7,12 +7,7 @@ on:
       - opened
       - edited
       - synchronize
-  
+
 jobs:
   check-pr-title:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Slashgear/action-check-pr-title@v4.3.0
-        with:
-          regexp: ".*(ab|AB)#[0-9]+.*" # Regex the title should match ab#(number) or AB#(number).
-          helpMessage: "PR title check failed: AB# must be included somewhere in the PR title!'"
+    uses: recognizegroup/vwt-ip-action-modules/.github/workflows/pull_request_title.yaml@v2.0.0
