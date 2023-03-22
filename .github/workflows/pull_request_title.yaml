@@ -10,4 +10,4 @@ on:
 
 jobs:
   check-pr-title:
-    uses: recognizegroup/vwt-ip-action-modules/.github/workflows/pull_request_title.yaml@v2.0.0
+    uses: recognizegroup/vwt-ip-action-modules/.github/workflows/pull_request_title.yaml@v3.0.0
