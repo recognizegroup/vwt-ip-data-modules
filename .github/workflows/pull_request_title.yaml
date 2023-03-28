@@ -1,0 +1,13 @@
+﻿name: PR Title Checker
+on:
+  pull_request:
+    branches:
+      - develop
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  check-pr-title:
+    uses: recognizegroup/vwt-ip-action-modules/.github/workflows/pull_request_title.yaml@v3.0.0
