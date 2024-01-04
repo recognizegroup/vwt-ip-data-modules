@@ -16,7 +16,6 @@ provider "azurerm" {
 
 
 data "azurerm_servicebus_topic" "topic" {
-  name                = var.topic_name
-  resource_group_name = var.resource_group_name
-  namespace_name      = var.service_bus_namespace
+  name         = var.topic_name
+  namespace_id = "${var.subscription_id}/resourceGroups/${var.resource_group_name}/providers/Microsoft.ServiceBus/namespaces/${var.service_bus_namespace}"
 }
