@@ -15,3 +15,7 @@ output "principal_id" {
   sensitive = true
 }
 
+output "api_audience" {
+  value = tolist(tolist(tolist(data.azurerm_linux_function_app.function_app.auth_settings)[0].active_directory)[0].allowed_audiences)[0]
+}
+
