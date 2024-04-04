@@ -12,6 +12,7 @@ output "id" {
 
 output "client_id" {
   value = var.app_registration_name != null ? data.azuread_application.app_registration[0].client_id : null
+
 }
 
 output "app_registration_name" {
