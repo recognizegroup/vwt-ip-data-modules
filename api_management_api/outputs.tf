@@ -22,3 +22,24 @@ output "app_registration_name" {
 output "application_id_uri" {
   value = "api://${var.app_registration_name}"
 }
+
+output "default_role" {
+  value = length([
+    for role in data.azuread_application.app_registration[0].app_roles : role if role.value == "Default.Access"
+  ]) > 0 ? [
+    for role in data.azuread_application.app_registration[0].app_roles : role.id if role.value == "Default.Access"
+  ][0] : null
+}
+
+output "roles" {
+  value = data.azuread_application.app_registration[0].app_roles
+}
+
+
+
+
+
+
+
+
+
