@@ -31,6 +31,10 @@ output "default_role" {
   ][0] : null
 }
 
+output "roles" {
+  value = data.azuread_application.app_registration[0].app_roles
+}
+
 
 
 
