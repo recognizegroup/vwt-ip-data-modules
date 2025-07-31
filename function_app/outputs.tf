@@ -16,6 +16,6 @@ output "principal_id" {
 }
 
 output "api_audience" {
-  value = tolist(tolist(tolist(data.azurerm_linux_function_app.function_app.auth_settings_v2)[0].active_directory_v2)[0].allowed_audiences)[0]
+  value = tolist(tolist(data.azurerm_linux_function_app.function_app.auth_settings_v2)[0].active_directory_v2.allowed_audiences)[0]
 }
 
