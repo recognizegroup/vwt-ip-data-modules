@@ -14,7 +14,6 @@ provider "azurerm" {
   features {}
 }
 
-data "azurerm_log_analytics_workspace" "log_analytics_workspace" {
-  name                = var.log_analytics_workspace_name
-  resource_group_name = var.resource_group_name
+data "azuread_application" "registration" {
+  display_name = var.app_registration_name
 }

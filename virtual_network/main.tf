@@ -14,7 +14,7 @@ provider "azurerm" {
   features {}
 }
 
-data "azurerm_log_analytics_workspace" "log_analytics_workspace" {
-  name                = var.log_analytics_workspace_name
+data "azurerm_virtual_network" "virtual_network" {
+  name                = var.name
   resource_group_name = var.resource_group_name
 }
