@@ -14,7 +14,7 @@ provider "azurerm" {
   features {}
 }
 
-data "azurerm_monitor_data_collection_endpoint" "this" {
+data "azurerm_monitor_data_collection_endpoint" "data_collection_endpoint" {
   name                = var.name
   resource_group_name = var.resource_group_name
 }
